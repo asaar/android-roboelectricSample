@@ -19,11 +19,16 @@ import org.robolectric.RobolectricTestRunner
 @RunWith(RobolectricTestRunner::class)
 class ExampleUnitTest {
     @Test
-    fun checkText() {
+    fun checkFirstText() {
         val activity = Robolectric.setupActivity(MainActivity::class.java!!)
+        val textRobo = activity.findViewById<TextView>(R.id.text_1)
+        assertThat(textRobo.text.toString(), IsEqual.equalTo("Roboelectric")) //will pass
+    }
 
-        val text = activity.findViewById(R.id.text) as TextView
-
-        assertThat(text.text.toString(), IsEqual.equalTo("Hello World!"))
+    @Test
+    fun checkSecondText() {
+        val activity = Robolectric.setupActivity(MainActivity::class.java!!)
+        val textTwo = activity.findViewById<TextView>(R.id.text_2)
+        assertThat(textTwo.text.toString(), IsEqual.equalTo("False typo")) //will fail
     }
 }
