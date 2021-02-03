@@ -1,0 +1,20 @@
+{
+  "tokenFile": "sltoken.txt",
+  "createBuildSessionId": true,
+  "appName": "RoboelectricKotlinDemo-SA",
+  "branchName": "master",
+  "buildName": "SL_Timestamp",
+  "packagesIncluded": "*com.*",
+  "packagesExcluded": "",
+  "filesIncluded": "*.class",
+  "filesExcluded": "*test-classes*",
+  "recursive": true,
+  "includeResources": true,
+ // "testTasksAndStages": {"testDebugUnitTest":"Unit Tests", "test":"Unit Tests", "integrationTest":"Integration Tests"},
+  "labId": null,
+  "executionType": "full",
+  "logEnabled": false,
+  "logDestination": "console",
+  "logLevel": "off",
+  "logFolder": "/tmp"
+  }

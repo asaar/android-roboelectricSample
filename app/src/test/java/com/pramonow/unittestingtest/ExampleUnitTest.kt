@@ -20,14 +20,14 @@ import org.robolectric.RobolectricTestRunner
 class ExampleUnitTest {
     @Test
     fun checkFirstText() {
-        val activity = Robolectric.setupActivity(MainActivity::class.java!!)
+        val activity = Robolectric.setupActivity(MainActivity::class.java)
         val textRobo = activity.findViewById<TextView>(R.id.text_1)
         assertThat(textRobo.text.toString(), IsEqual.equalTo("Roboelectric")) //will pass
     }
 
     @Test
     fun checkSecondText() {
-        val activity = Robolectric.setupActivity(MainActivity::class.java!!)
+        val activity = Robolectric.setupActivity(MainActivity::class.java)
         val textTwo = activity.findViewById<TextView>(R.id.text_2)
         assertThat(textTwo.text.toString(), IsEqual.equalTo("False typo")) //will fail
     }
